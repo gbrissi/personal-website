@@ -1,9 +1,12 @@
+import Header from "./components/Header"
+import {Container} from '@mui/material'
+
 function App() {
 
   return (
-    <div>
-      <h1>Portfolio</h1>
-    </div>
+    <Container>
+      <Header/>
+    </Container>
   )
 }
 
