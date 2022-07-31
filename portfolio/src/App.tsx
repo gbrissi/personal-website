@@ -1,13 +1,18 @@
 import Header from "./components/Header"
-import {Container} from '@mui/material'
+import {styled} from '@mui/system'
 
 function App() {
 
   return (
-    <Container>
+    <AppContainer>
       <Header/>
-    </Container>
+    </AppContainer>
   )
 }
+
+const AppContainer = styled('div')`
+  min-height: 100vh;
+  background-color: whitesmoke;
+`
 
 export default App

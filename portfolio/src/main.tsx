@@ -4,15 +4,18 @@ import App from './App'
 
 import './index.css'
 
-import { red, blue } from '@mui/material/colors'
+import { teal } from '@mui/material/colors'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const theme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
-      main: red[500],
-    }
+      light: '#f5f5f5',
+      main: '#fff',
+      dark: '#424242'
+    },
   }
 })
 
