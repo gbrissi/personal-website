@@ -1,23 +1,34 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
 import {styled} from '@mui/material'
-import {AppBar, Toolbar, Paper, Typography, Grid, Container, Fade } from '@mui/material'
+import {AppBar, Toolbar, Paper, Typography, IconButton, Grid, Container, Fade } from '@mui/material'
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import {useTheme, ThemeProvider, createTheme} from '@mui/material/styles';
+
+export const ColorModeContext = React.createContext({ toggleColorMode: () => {
+}})
 
 function Header() {
+  const theme = useTheme();
+  console.log(theme.palette.mode)
+  const colorMode = React.useContext(ColorModeContext)
   return (
     <AppBar position='static' color='primary'>
       <CustomToolbar variant='regular'>
         <Fade timeout={300} in unmountOnExit>
           <LinkContainer>
             <StyledDivision>
-              <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Home</CustomTypography>
-            </StyledDivision>
-            <StyledDivision>
-              <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Sobre mim</CustomTypography>
+              <CustomTypography sx={{cursor:'pointer'}} variant='body1'>About me</CustomTypography>
             </StyledDivision>            
             <StyledDivision>
-              <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Projetos</CustomTypography>
+              <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Portfolio</CustomTypography>
             </StyledDivision>
           </LinkContainer>
+        </Fade>
+        <Fade timeout={1000} in>
+            <IconButton onClick={colorMode.toggleColorMode} color='inherit'>
+              {theme.palette.mode === 'dark' ? <DarkModeIcon/> : <LightModeIcon/>} 
+            </IconButton>
         </Fade>
       </CustomToolbar>
     </AppBar>
@@ -32,9 +43,6 @@ const LinkContainer = styled('div')`
   width: 100%;
   display: flex;
   align-items: center;
-  @media (max-width: 600px) {
-    justify-content: center;
-  }
 `
 
 const CustomTypography = styled(Typography)`
@@ -59,6 +67,7 @@ const CustomToolbar = styled(Toolbar)`
   justify-content: space-between;
   @media (max-width: 600px) {
     width: 100vw;
+    padding: 0 2rem;
   }
 `
 

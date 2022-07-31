@@ -1,19 +1,24 @@
 import React from 'react'
+import Photo from '../assets/photo.png'
+import { teal } from '@mui/material/colors'
 import {styled} from '@mui/material/styles'
-import { Typography, Fade} from '@mui/material'
+import { Typography, Zoom, Avatar } from '@mui/material'
 
 function Banner() {
   return (
-    <Fade in timeout={300}>
-      <BannerContainer>
-        <BannerComponents>
-          <Typography variant='body1'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita illum autem pariatur rerum. Laboriosam dolore molestias odit necessitatibus suscipit tempore veniam, expedita facere ducimus asperiores ut labore enim odio autem.</Typography>
-        </BannerComponents>
-        <BannerComponents>
-          <CustomTypography variant='h2'>Olá, meu nome é Gabriel!</CustomTypography>
-        </BannerComponents>
-      </BannerContainer>
-    </Fade>
+    <Zoom in timeout={300}>
+      <Wrapper>
+        <BannerContainer>
+          <BannerComponents>
+            <GradientTypography variant='body1'>Aspiring Software Developer </GradientTypography>
+            <Typography variant='body1'>Software development student with experience in JavaScript, NodeJS and React among many other libraries and frameworks :D</Typography>
+          </BannerComponents>
+          <BannerComponents>
+            <CustomTypography variant='h2'>Hello, my name is Gabriel!</CustomTypography>
+          </BannerComponents>
+        </BannerContainer>
+      </Wrapper>
+    </Zoom>
   )
 }
 
@@ -30,19 +35,43 @@ const CustomTypography = styled(Typography)`
   }
 `
 
-const BannerContainer = styled('div')`
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
-    @media (max-width: 600px) {
-      flex-direction: column-reverse;
-    }
-`
-
-const BannerComponents = styled('div')`  
+const Wrapper = styled('div')`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 50vh
+`
+
+const BannerContainer = styled('div')`
+  width: 60%;
+  justify-self: center;
+  align-self: center;
+  margin: 2rem 0;
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  flex-direction: column-reverse;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+`
+
+const GradientTypography = styled(Typography)`
+  font-weight: bolder;
+  color: transparent;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);
+  background-clip: text;
+`
+
+const BannerComponents = styled('div')` 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding: 1rem;
   flex: 1;
 `
