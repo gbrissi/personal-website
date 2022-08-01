@@ -12,28 +12,28 @@ function Portfolio(props: any) {
             </Zoom>
             <Fade timeout={500} in>
               <GridContainer sx={{color: props.gridFontColor}}container>
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>                
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>
-                <ImageContainer sm={6} md={4} lg={3}>
+                <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
                 </ImageContainer>
               </GridContainer>
@@ -59,6 +59,7 @@ const TitleContainer = styled('div')`
 `
 
 const GridContainer = styled(Grid)`
+  padding: 5px;
   width: 75vw;
   @media (max-width: 900px) {
     width: 90vw;
@@ -70,6 +71,7 @@ const GridContainer = styled(Grid)`
 
 const PortfolioContainer = styled(Paper)`
     padding: 2rem;
+    padding-top: 5rem;
     display: flex;
     width: 100%;
     justify-content: center;
