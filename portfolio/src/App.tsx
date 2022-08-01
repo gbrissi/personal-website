@@ -8,7 +8,7 @@ import {useTheme, ThemeProvider, createTheme} from '@mui/material/styles'
 import {ColorModeContext} from './components/Header'
 
 function App() {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+  const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -41,7 +41,7 @@ function App() {
           <Header color={mode === 'light' ? 'secondary' : 'primary'}/>
           <Container>
             <Banner/>
-            <Portfolio gridFontColor = {mode === 'light' ? '#fff' : '#000'} gridColor = {mode === 'light' ? '#333' : '#cecece'} color={mode === 'light' ? '#f5f5f5' : '#161616'}/>
+            <Portfolio imageContainerFontColor = {mode === 'light' ? '#000' : '#fff'} gridFontColor = {mode === 'light' ? '#fff' : '#000'} gridColor = {mode === 'light' ? '#333' : '#cecece'} color={mode === 'light' ? '#f5f5f5' : '#161616'}/>
           </Container>
         </AppContainer>
       </ThemeProvider>

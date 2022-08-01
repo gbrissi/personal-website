@@ -1,6 +1,7 @@
 import React from 'react'
 import {Grid, styled} from '@mui/material'
 import {Typography, Zoom, Paper, Fade} from '@mui/material'
+import portfolioImg from '../assets/portfolio-v1.png'
 
 function Portfolio(props: any) {
   return (
@@ -12,29 +13,61 @@ function Portfolio(props: any) {
             </Zoom>
             <Fade timeout={1000} in>
               <GridContainer sx={{color: props.gridFontColor}}container>
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
-                </ImageContainer>                
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start', fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</Typography>
+                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start'}} variant='body2'>Web Project made with React and Material UI</Typography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={6} sm={6} md={4} lg={3}>
-                  <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start', fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</Typography>
+                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start'}} variant='body2'>Web Project made with React and Material UI</Typography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
+                </ImageContainer>
+                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start', fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</Typography>
+                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start'}} variant='body2'>Web Project made with React and Material UI</Typography>
+                  <ImageWrapper sx={{backgroundColor: props.gridColor}}>
+                    <Image src={portfolioImg}></Image>
+                  </ImageWrapper>
                 </ImageContainer>
               </GridContainer>
             </Fade>
@@ -42,10 +75,9 @@ function Portfolio(props: any) {
     )
 }
 
-const Image = styled('div')`
-  padding: 5px;
+const Image = styled('img')`
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 `
 
 const TitleContainer = styled('div')`
@@ -95,8 +127,45 @@ const CustomTypography = styled(Typography)`
 `
 
 const ImageContainer = styled(Grid)`
-  padding: 5px;
-  height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  height: 250px;
+  margin-bottom: 2rem;
+  @media (max-width: 600px) {
+    height: 180px;
+    margin: 0 3rem;
+    margin-bottom: 3rem;
+  }
+`
+
+const ImageWrapper = styled('div')`
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    width: 5px;
+  } 
+  ::-webkit-scrollbar-track {
+    background: #ffffff92
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);    /* color of the scroll thumb */
+  }
+  @media (max-width: 600px) {
+    align-self: center;
+    max-width: 60vw;
+  }
+`
+
+const ImageTypography = styled(Typography)`
+  align-self: start;
+  text-align: center;
+  @media (max-width: 600px) {
+    align-self: center;
+  }
 `
 
 export default Portfolio

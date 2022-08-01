@@ -34,7 +34,7 @@ function Header(props:any) {
           </LinkContainer>
         </Fade>
         <Fade timeout={1000} in>
-            <IconButton onClick={colorMode.toggleColorMode} color='inherit'>
+            <IconButton sx={{padding: '1rem'}} onClick={colorMode.toggleColorMode} color='inherit'>
               {theme.palette.mode === 'dark' ? <DarkModeIcon/> : <LightModeIcon/>} 
             </IconButton>
         </Fade>
@@ -45,6 +45,9 @@ function Header(props:any) {
 
 const StyledDivision = styled('div')`
   padding: 0 25px;
+  @media (max-width: 600px) {
+    padding: 0 10px;
+  }
 `
 
 const LinkContainer = styled('div')`
@@ -69,6 +72,7 @@ const CustomTypography = styled(Typography)`
     background: linear-gradient(90deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);
   }
 `
+/* background: ${(props) => props backgroundColor} */
 
 
 const CustomToolbar = styled(Toolbar)`
@@ -76,8 +80,12 @@ const CustomToolbar = styled(Toolbar)`
   align-self: center;
   justify-content: space-between;
   @media (max-width: 600px) {
-    width: 100vw;
-    padding: 0 2rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  @media (max-width: 900px) {
+    width: 90vw;
   }
 `
 

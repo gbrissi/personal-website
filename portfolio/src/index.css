@@ -3,3 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+} 
+
+::-webkit-scrollbar-track {
+  background: rgb(189, 189, 189)
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);    /* color of the scroll thumb */
+}
