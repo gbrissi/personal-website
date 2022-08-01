@@ -49,22 +49,22 @@ function Portfolio(props: any) {
                   </ImageWrapper>
                 </ImageContainer>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
-                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start', fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</Typography>
-                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start'}} variant='body2'>Web Project made with React and Material UI</Typography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={portfolioImg}></Image>
                   </ImageWrapper>
                 </ImageContainer>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
-                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start', fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</Typography>
-                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start'}} variant='body2'>Web Project made with React and Material UI</Typography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={portfolioImg}></Image>
                   </ImageWrapper>
                 </ImageContainer>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
-                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start', fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</Typography>
-                  <Typography sx={{color: props.imageContainerFontColor, alignSelf: 'start'}} variant='body2'>Web Project made with React and Material UI</Typography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>Web Project made with React and Material UI</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={portfolioImg}></Image>
                   </ImageWrapper>
@@ -102,15 +102,17 @@ const GridContainer = styled(Grid)`
 ` 
 
 const PortfolioContainer = styled(Paper)`
-    padding: 2rem;
-    padding-top: 5rem;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2rem;
-    min-height: 50vh;
+  box-shadow: none;
+  padding: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  min-height: 50vh;
 `
 
 const CustomTypography = styled(Typography)`
@@ -152,6 +154,7 @@ const ImageWrapper = styled('div')`
     background: #ffffff92
   }
   ::-webkit-scrollbar-thumb {
+    border-radius: 0;
     background: linear-gradient(180deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);    /* color of the scroll thumb */
   }
   @media (max-width: 600px) {

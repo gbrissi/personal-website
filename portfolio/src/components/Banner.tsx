@@ -13,7 +13,7 @@ function Banner() {
             <GradientTypography variant='body1'>Aspiring Software Developer </GradientTypography>
             <Typography variant='body1'>Software development student with experience in JavaScript, NodeJS and React among many other libraries and frameworks :D</Typography>
           </BannerComponents>
-          <BannerComponents>
+          <BannerComponents sx={{flexDirection: 'row'}}>
             <CustomTypography variant='h2'>Hello, my name is Gabriel!</CustomTypography>
           </BannerComponents>
         </BannerContainer>
@@ -39,7 +39,7 @@ const Wrapper = styled('div')`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50vh
+  min-height: 60vh
 `
 
 const BannerContainer = styled('div')`

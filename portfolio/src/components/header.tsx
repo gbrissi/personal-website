@@ -31,6 +31,13 @@ function Header(props:any) {
                 </Button>
               </Redirect>
             </StyledDivision>
+            <StyledDivision>
+              <Redirect href='#courses'>
+                <Button color={props.color}>
+                  <CustomTypography sx={{cursor:'pointer'}} variant='body2'>Courses</CustomTypography>
+                </Button>
+              </Redirect>
+            </StyledDivision>
           </LinkContainer>
         </Fade>
         <Fade timeout={1000} in>

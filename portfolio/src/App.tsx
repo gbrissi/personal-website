@@ -1,6 +1,8 @@
 import Header from "./components/Header"
 import Banner from "./components/Banner"
 import Portfolio from './components/Portfolio'
+import Courses from './components/Courses'
+
 import {styled} from '@mui/system'
 import {Paper} from '@mui/material'
 import React, {useState} from "react"
@@ -42,6 +44,7 @@ function App() {
           <Container>
             <Banner/>
             <Portfolio imageContainerFontColor = {mode === 'light' ? '#000' : '#fff'} gridFontColor = {mode === 'light' ? '#fff' : '#000'} gridColor = {mode === 'light' ? '#333' : '#cecece'} color={mode === 'light' ? '#f5f5f5' : '#161616'}/>
+            <Courses/>
           </Container>
         </AppContainer>
       </ThemeProvider>
