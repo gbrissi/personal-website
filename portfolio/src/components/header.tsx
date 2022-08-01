@@ -70,6 +70,7 @@ const CustomTypography = styled(Typography)`
   }
 `
 
+
 const CustomToolbar = styled(Toolbar)`
   width: 75vw;
   align-self: center;
