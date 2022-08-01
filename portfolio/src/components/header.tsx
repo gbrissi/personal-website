@@ -20,14 +20,14 @@ function Header(props:any) {
             <StyledDivision>
               <Redirect href='#about-me'>
                 <Button color={props.color}>  
-                  <CustomTypography sx={{cursor:'pointer'}} variant='body1'>About me</CustomTypography>
+                  <CustomTypography sx={{cursor:'pointer'}} variant='body2'>About me</CustomTypography>
                 </Button>
               </Redirect>
             </StyledDivision>            
             <StyledDivision>
               <Redirect href='#portfolio'>
                 <Button color={props.color}>
-                  <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Portfolio</CustomTypography>
+                  <CustomTypography sx={{cursor:'pointer'}} variant='body2'>Portfolio</CustomTypography>
                 </Button>
               </Redirect>
             </StyledDivision>
