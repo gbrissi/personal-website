@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import {styled} from '@mui/material'
-import {AppBar, Toolbar, Paper, Typography, IconButton, Grid, Container, Fade } from '@mui/material'
+import {AppBar, Toolbar, Paper, Button, Typography, IconButton, Grid, Container, Fade } from '@mui/material'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import {useTheme, ThemeProvider, createTheme} from '@mui/material/styles';
@@ -8,7 +8,7 @@ import {useTheme, ThemeProvider, createTheme} from '@mui/material/styles';
 export const ColorModeContext = React.createContext({ toggleColorMode: () => {
 }})
 
-function Header() {
+function Header(props:any) {
   const theme = useTheme();
   console.log(theme.palette.mode)
   const colorMode = React.useContext(ColorModeContext)
@@ -19,12 +19,16 @@ function Header() {
           <LinkContainer>
             <StyledDivision>
               <Redirect href='#about-me'>
-                <CustomTypography sx={{cursor:'pointer'}} variant='body1'>About me</CustomTypography>
+                <Button color={props.color}>  
+                  <CustomTypography sx={{cursor:'pointer'}} variant='body1'>About me</CustomTypography>
+                </Button>
               </Redirect>
             </StyledDivision>            
             <StyledDivision>
               <Redirect href='#portfolio'>
-                <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Portfolio</CustomTypography>
+                <Button color={props.color}>
+                  <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Portfolio</CustomTypography>
+                </Button>
               </Redirect>
             </StyledDivision>
           </LinkContainer>
@@ -55,9 +59,6 @@ const Redirect = styled('a')`
 
 const CustomTypography = styled(Typography)`
   font-weight: bolder;
-  :hover {
-    font-size: 1.1rem
-  }
   ::after {
     display: block;
     position: relative;

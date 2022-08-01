@@ -10,7 +10,7 @@ function Portfolio(props: any) {
                     <CustomTypography variant='h2'>Check out my portfolio!</CustomTypography>
                 </TitleContainer>
             </Zoom>
-            <Fade timeout={500} in>
+            <Fade timeout={1000} in>
               <GridContainer sx={{color: props.gridFontColor}}container>
                 <ImageContainer xs={6} sm={6} md={4} lg={3}>
                   <Image sx={{backgroundColor: props.gridColor}}>Testando o Grid</Image>

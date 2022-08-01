@@ -38,7 +38,7 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <AppContainer>
-          <Header/>
+          <Header color={mode === 'light' ? 'secondary' : 'primary'}/>
           <Container>
             <Banner/>
             <Portfolio gridFontColor = {mode === 'light' ? '#fff' : '#000'} gridColor = {mode === 'light' ? '#333' : '#cecece'} color={mode === 'light' ? '#f5f5f5' : '#161616'}/>
