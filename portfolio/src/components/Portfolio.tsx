@@ -109,7 +109,7 @@ const PortfolioContainer = styled(Paper)`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 2rem 0;
+    margin-top: 2rem;
     min-height: 50vh;
 `
 

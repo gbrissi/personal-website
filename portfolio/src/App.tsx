@@ -50,7 +50,6 @@ function App() {
 }
 
 const AppContainer = styled(Paper)`
-  box-shadow: "none";
   min-height: 100vh;
 `
 
