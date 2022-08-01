@@ -4,7 +4,7 @@ import {Typography, Zoom, Paper, Fade} from '@mui/material'
 
 function Portfolio(props: any) {
   return (
-        <PortfolioContainer sx={{backgroundColor: props.color}}>
+        <PortfolioContainer sx={{backgroundColor: props.color}} id='portfolio'>
             <Zoom timeout={300} in>
                 <TitleContainer>
                     <CustomTypography variant='h2'>Check out my portfolio!</CustomTypography>

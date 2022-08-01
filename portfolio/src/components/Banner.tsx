@@ -7,7 +7,7 @@ import { Typography, Zoom, Avatar } from '@mui/material'
 function Banner() {
   return (
     <Zoom in timeout={300}>
-      <Wrapper>
+      <Wrapper id='about-me'>
         <BannerContainer>
           <BannerComponents>
             <GradientTypography variant='body1'>Aspiring Software Developer </GradientTypography>

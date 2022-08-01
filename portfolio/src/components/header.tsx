@@ -18,10 +18,14 @@ function Header() {
         <Fade timeout={300} in unmountOnExit>
           <LinkContainer>
             <StyledDivision>
-              <CustomTypography sx={{cursor:'pointer'}} variant='body1'>About me</CustomTypography>
+              <Redirect href='#about-me'>
+                <CustomTypography sx={{cursor:'pointer'}} variant='body1'>About me</CustomTypography>
+              </Redirect>
             </StyledDivision>            
             <StyledDivision>
-              <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Portfolio</CustomTypography>
+              <Redirect href='#portfolio'>
+                <CustomTypography sx={{cursor:'pointer'}} variant='body1'>Portfolio</CustomTypography>
+              </Redirect>
             </StyledDivision>
           </LinkContainer>
         </Fade>
@@ -43,6 +47,10 @@ const LinkContainer = styled('div')`
   width: 100%;
   display: flex;
   align-items: center;
+`
+
+const Redirect = styled('a')`
+  all: unset;
 `
 
 const CustomTypography = styled(Typography)`
