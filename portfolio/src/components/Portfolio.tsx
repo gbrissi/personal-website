@@ -78,9 +78,31 @@ function Portfolio(props: any) {
                 </ImageContainer>
               </GridContainer>
             </Fade>
+            <Fade in>
+              <CheckMore>
+                <Typography variant='h5'>You can check out for more in</Typography>
+                <Typography component='a' target='_blank' href='https://github.com/gbrissi' sx={{textDecoration:'inherit',color:'inherit', fontWeight:'bolder', cursor:'pointer'}}variant='h5'>github.com/gbrissi</Typography>
+              </CheckMore>
+            </Fade>
         </PortfolioContainer>
     )
 }
+
+const CheckMore = styled('div')`
+  margin-top: 1.5rem;
+  width: 75vw;
+  @media (max-width: 900px) {
+    width: 90vw;
+  }
+  @media (max-width: 600px) {
+    padding: 1rem;
+    width: 100vw;
+    display: 'flex';
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+`
 
 const Image = styled('img')`
   width: 100%;
