@@ -180,7 +180,7 @@ const ImageWrapper = styled('div')`
   width: 100%;
   height: 100%;
   background: whitesmoke;
-  overflow-y: auto;
+  overflow: auto;
   ::-webkit-scrollbar {
     width: 5px;
   } 
@@ -189,11 +189,10 @@ const ImageWrapper = styled('div')`
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 0;
-    background: linear-gradient(180deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);    /* color of the scroll thumb */
   }
   @media (max-width: 600px) {
     align-self: center;
-    max-width: 60vw;
+    max-width: 75vw;
   }
 `
 
