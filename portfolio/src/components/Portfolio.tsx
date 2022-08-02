@@ -107,6 +107,7 @@ const CheckMore = styled('div')`
 `
 
 const Image = styled('img')`
+  display: block;
   width: 100%;
   min-height: 100%;
 `
