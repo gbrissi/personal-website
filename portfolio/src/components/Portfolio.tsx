@@ -20,56 +20,56 @@ function Portfolio(props: any) {
             </Zoom>
             <Fade timeout={1000} in>
               <GridContainer sx={{color: props.gridFontColor}}container>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A portfolio built with pure HTML + CSS + Javascript</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={portfolioImg}></Image>
                   </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v2.0</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A personal project built to pratice libraries used to create user interfaces, such as React.js and Material UI</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={portfoliov2Img}></Image>
                   </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Discover</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>First web application ever made. Built along Rocketseat Discover course.</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={discover}></Image>
                   </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Figmaland</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>First time building a user interface without following any guides but a design concept, HTML + CSS only</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={figmaland}></Image>
                   </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Books</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>First time trying to use Bootstrap Framework, website build along a online course in Youtube</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={books}></Image>
                   </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Time Tracking</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>FrontEndMentor challenge, responsive user interface built with Bootstrap framework</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={timeTracking}></Image>
                   </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Amazon Clone | Under Construction</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A "Amazon Clone" built with React.js, built along a React course made by codedamn in Youtube</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={amazonClone}></Image>
                   </ImageWrapper>
                 </ImageContainer>
-                <ImageContainer xs={12} sm={6} md={4} lg={3}>
+                <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Library Project</ImageTypography>
                   <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A simple "library system manager" CRUD application that was built in college using HTML, CSS, Javascript, PHP and MySQL</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
