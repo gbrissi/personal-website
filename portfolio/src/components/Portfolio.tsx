@@ -22,14 +22,14 @@ function Portfolio(props: any) {
               <GridContainer sx={{color: props.gridFontColor}}container>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v1.0</ImageTypography>
-                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A portfolio made with pure HTML + CSS + Javascript</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A portfolio built with pure HTML + CSS + Javascript</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={portfolioImg}></Image>
                   </ImageWrapper>
                 </ImageContainer>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Portfolio v2.0</ImageTypography>
-                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A personal project  made to pratice libraries used to create UI interfaces, such as React.js and Material UI</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A personal project built to pratice libraries used to create user interfaces, such as React.js and Material UI</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={portfoliov2Img}></Image>
                   </ImageWrapper>
@@ -43,7 +43,7 @@ function Portfolio(props: any) {
                 </ImageContainer>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Figmaland</ImageTypography>
-                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>First time building a user interface without following any guides besides the design concept, HTML + CSS only</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>First time building a user interface without following any guides but a design concept, HTML + CSS only</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={figmaland}></Image>
                   </ImageWrapper>
@@ -64,14 +64,14 @@ function Portfolio(props: any) {
                 </ImageContainer>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Amazon Clone | Under Construction</ImageTypography>
-                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A "Amazon Clone" built with react, built along a React course made by codedamn in Youtube</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A "Amazon Clone" built with React.js, built along a React course made by codedamn in Youtube</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={amazonClone}></Image>
                   </ImageWrapper>
                 </ImageContainer>
                 <ImageContainer xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Library Project</ImageTypography>
-                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A college CRUD application that was built with HTML, CSS, JS, PHP and MYSQL</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>A simple "library system manager" CRUD application that was built in college using HTML, CSS, Javascript, PHP and MySQL</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={libraryProject}></Image>
                   </ImageWrapper>
@@ -90,6 +90,7 @@ function Portfolio(props: any) {
 
 const CheckMore = styled('div')`
   margin-top: 1.5rem;
+  padding-left: 0.8rem;
   display: flex;
   width: 75vw;
   @media (max-width: 900px) {
@@ -171,7 +172,7 @@ const ImageContainer = styled(Grid)`
     height: 270px;
   }
   @media (max-width: 600px) {
-    height: 240px;
+    height: 300px;
     margin: 0 3rem;
     margin-bottom: 3rem;
   }
@@ -193,7 +194,7 @@ const ImageWrapper = styled('div')`
   }
   @media (max-width: 600px) {
     align-self: center;
-    max-width: 75vw;
+    max-width: 70vw;
   }
 `
 

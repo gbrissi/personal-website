@@ -5,7 +5,7 @@ import {Typography} from '@mui/material'
 function Courses() {
   return (
     <Section id='courses'>
-        <CustomTypography variant='h2'>Courses</CustomTypography>
+        <CustomTypography variant='h2'>Courses that I have gone through</CustomTypography>
     </Section>
   )
 }
