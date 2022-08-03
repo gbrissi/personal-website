@@ -44,7 +44,7 @@ function App() {
           <Container>
             <Banner/>
             <Portfolio imageContainerFontColor = {mode === 'light' ? '#000' : '#fff'} gridFontColor = {mode === 'light' ? '#fff' : '#000'} gridColor = {mode === 'light' ? '#333' : '#cecece'} color={mode === 'light' ? '#f5f5f5' : '#161616'}/>
-            <Courses/>
+            {/*<Courses/>*/}
           </Container>
         </AppContainer>
       </ThemeProvider>
