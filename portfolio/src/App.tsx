@@ -1,7 +1,7 @@
-import Header from "./components/Header"
-import Banner from "./components/Banner"
-import Portfolio from './components/Portfolio'
-import Courses from './components/Courses'
+import Header from "./components/Header.js"
+import Banner from "./components/Banner.js"
+import Portfolio from './components/Portfolio.js'
+import Courses from './components/Courses.js'
 
 import {styled} from '@mui/system'
 import {Paper} from '@mui/material'
