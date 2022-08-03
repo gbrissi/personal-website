@@ -42,7 +42,7 @@ function Header(props:any) {
         </Fade>
         <Fade timeout={1000} in>
             <IconButton sx={{padding: '1rem'}} onClick={colorMode.toggleColorMode} color='inherit'>
-              {theme.palette.mode === 'dark' ? <DarkModeIcon/> : <LightModeIcon/>} 
+              {theme.palette.mode === 'dark' ? <LightModeIcon/> : <DarkModeIcon/>} 
             </IconButton>
         </Fade>
       </CustomToolbar>
