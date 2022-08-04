@@ -13,7 +13,7 @@ function Header(props:any) {
   console.log(theme.palette.mode)
   const colorMode = React.useContext(ColorModeContext)
   return (
-    <AppBar position='static' color='primary'>
+    <AppBar position='fixed' color='primary'>
       <CustomToolbar variant='regular'>
         <Fade timeout={300} in unmountOnExit>
           <LinkContainer>
