@@ -10,7 +10,7 @@ import {useTheme, ThemeProvider, createTheme} from '@mui/material/styles'
 import {ColorModeContext} from './components/Header'
 
 function App() {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
+  const [mode, setMode] = React.useState<'light' | 'dark'>('light');
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
