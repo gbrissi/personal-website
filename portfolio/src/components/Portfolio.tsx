@@ -184,6 +184,7 @@ const ImageWrapper = styled('div')`
   width: 100%;
   height: 100%;
   background: whitesmoke;
+  border: 1px solid #363636;
   overflow: auto;
   ::-webkit-scrollbar {
     width: 5px;

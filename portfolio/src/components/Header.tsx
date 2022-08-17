@@ -9,11 +9,29 @@ export const ColorModeContext = React.createContext({ toggleColorMode: () => {
 }})
 
 function Header(props:any) {
+
+/*
+
+  //hides the header when scrolling down, show up header when scrolling up
+  var lastScrollTop = 0;
+  const navbar = document.getElementById('header') as HTMLElement
+  window.addEventListener("scroll", function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    if (scrollTop > lastScrollTop) {
+      navbar.style.top = '-100px'
+    } else {
+      navbar.style.top = '0'
+    }
+    lastScrollTop = scrollTop
+  })
+
+*/
+
   const theme = useTheme();
   console.log(theme.palette.mode)
   const colorMode = React.useContext(ColorModeContext)
   return (
-    <AppBar position='fixed' color='primary'>
+    <AppBar position='fixed' id='header'>
       <CustomToolbar variant='regular'>
         <Fade timeout={300} in unmountOnExit>
           <LinkContainer>
