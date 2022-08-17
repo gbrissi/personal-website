@@ -36,7 +36,7 @@ function Portfolio(props: any) {
                 </ImageContainer>
                 <ImageContainer item xs={12} sm={6} md={4} lg={3}>
                   <ImageTypography sx={{color: props.imageContainerFontColor, fontWeight: 'bolder'}} variant='body1'>Discover</ImageTypography>
-                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>First web application ever made by myself. Built along Rocketseat Discover course.</ImageTypography>
+                  <ImageTypography sx={{color: props.imageContainerFontColor}} variant='body2'>First web application that I had ever done. Built along Rocketseat Discover course.</ImageTypography>
                   <ImageWrapper sx={{backgroundColor: props.gridColor}}>
                     <Image src={discover}></Image>
                   </ImageWrapper>
