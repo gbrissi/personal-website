@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import {styled} from '@mui/material'
 import {AppBar, Toolbar, Paper, Button, Typography, IconButton, Grid, Container, Fade } from '@mui/material'
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -10,28 +10,32 @@ export const ColorModeContext = React.createContext({ toggleColorMode: () => {
 
 function Header(props:any) {
 
-/*
+  //position and visibility of the appbar component
+  const [position, setPosition] = useState(window.pageYOffset)
+  const [visible, setVisible] = useState(true) 
 
-  //hides the header when scrolling down, show up header when scrolling up
-  var lastScrollTop = 0;
-  const navbar = document.getElementById('header') as HTMLElement
-  window.addEventListener("scroll", function() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    if (scrollTop > lastScrollTop) {
-      navbar.style.top = '-100px'
-    } else {
-      navbar.style.top = '0'
-    }
-    lastScrollTop = scrollTop
+  //hides the header when scrolling down and shows it when scrolling up
+  useEffect(()=> {
+    const handleScroll = () => {
+      let moving = window.pageYOffset
+      
+      setVisible(position > moving);
+      setPosition(moving)
+    };
+    window.addEventListener("scroll", handleScroll);
+    return(() => {
+      window.removeEventListener("scroll", handleScroll);
+    })
   })
+  const cls = visible ? {top: "0", transition: 'top 0.5s ease-in-out'} : {top: "-80px", transition: 'top 0.5s ease-in-out'};
 
-*/
-
+  //use pallete theme
   const theme = useTheme();
   console.log(theme.palette.mode)
   const colorMode = React.useContext(ColorModeContext)
+
   return (
-    <AppBar position='fixed' id='header'>
+    <AppBar sx={cls} position='fixed' id='header'>
       <CustomToolbar variant='regular'>
         <Fade timeout={300} in unmountOnExit>
           <LinkContainer>
@@ -55,13 +59,13 @@ function Header(props:any) {
                   <CustomTypography sx={{cursor:'pointer'}} variant='body2'>Courses</CustomTypography>
                 </Button>
               </Redirect>
-  </StyledDivision>*/}
+            </StyledDivision>*/}
           </LinkContainer>
         </Fade>
         <Fade timeout={1000} in>
-            <IconButton sx={{padding: '1rem'}} onClick={colorMode.toggleColorMode} color='inherit'>
-              {theme.palette.mode === 'dark' ? <LightModeIcon/> : <DarkModeIcon/>} 
-            </IconButton>
+          <IconButton sx={{padding: '1rem'}} onClick={colorMode.toggleColorMode} color='inherit'>
+            {theme.palette.mode === 'dark' ? <LightModeIcon/> : <DarkModeIcon/>} 
+          </IconButton>
         </Fade>
       </CustomToolbar>
     </AppBar>
