@@ -31,7 +31,6 @@ function Header(props:any) {
 
   //use pallete theme
   const theme = useTheme();
-  console.log(theme.palette.mode)
   const colorMode = React.useContext(ColorModeContext)
 
   return (
