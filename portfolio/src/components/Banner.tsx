@@ -14,7 +14,7 @@ function Banner() {
             <Typography variant='body1'>Software development student with experience in JavaScript, NodeJS and React among many other libraries and frameworks :D</Typography>
           </BannerComponents>
           <BannerComponents sx={{flexDirection: 'row'}}>
-            <CustomTypography variant='h2'>Hello there, my name is Gabriel! &#128075;</CustomTypography>
+            <CustomTypography variant='h2'>Hello there, my name is Gabriel! <span style={{position: 'relative', fontSize:'3rem', top: '-5px'}}>&#128075;</span></CustomTypography>
           </BannerComponents>
         </BannerContainer>
       </Wrapper>
