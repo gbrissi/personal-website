@@ -10,4 +10,4 @@ The first version of this project is now deployed to Vercel! You can check it he
 - [ ] Experiences
 
 ## Preview:
-![Website Preview](/preview-portfolio.png)
+![Website Preview](/portfolio-preview.png)
