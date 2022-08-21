@@ -155,7 +155,7 @@ const CustomTypography = styled(Typography)`
     position: relative;
     content: '';
     margin-top: -4px;
-    height: 3px;
+    height: 4px;
     border-radius: 5px;
     background: linear-gradient(90deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);
   } @media (max-width: 600px) {
