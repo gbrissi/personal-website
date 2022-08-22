@@ -10,12 +10,12 @@ import timeTracking from '../assets/time-tracking.png'
 import amazonClone from '../assets/amazon-clone.png'
 import libraryProject from '../assets/biblioteca.png'
 
-function Portfolio(props: any) {
+export default function Portfolio(props: any) {
   return (
         <PortfolioContainer sx={{backgroundColor: props.color}} id='portfolio'>
             <Zoom timeout={300} in>
                 <TitleContainer>
-                    <CustomTypography variant='h2'>Check out my portfolio!</CustomTypography>
+                    <CustomTypography variant='h2'>Check out my portfolio! <span style={{position: 'relative', fontSize:'3rem', top: '-5px'}}>&#128640;</span></CustomTypography>
                 </TitleContainer>
             </Zoom>
             <Fade timeout={1000} in>
@@ -211,5 +211,3 @@ const ImageTypography = styled(Typography)`
   }
   
 `
-
-export default Portfolio

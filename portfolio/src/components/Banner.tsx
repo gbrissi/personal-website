@@ -2,13 +2,15 @@ import React from 'react'
 import Photo from '../assets/photo.png'
 import { teal } from '@mui/material/colors'
 import {styled} from '@mui/material/styles'
+import SocialMediaRow from './SocialMediaRow'
 import { Typography, Zoom, Avatar } from '@mui/material'
 
-function Banner() {
+export default function Banner() {
   return (
     <Zoom in timeout={300}>
       <Wrapper id='about-me'>
         <BannerContainer>
+          <SocialMediaRow/>
           <BannerComponents>
             <GradientTypography variant='body1'>Aspiring Software Developer </GradientTypography>
             <Typography variant='body1'>Software development student with experience in JavaScript, NodeJS and React among many other libraries and frameworks :D</Typography>
@@ -78,5 +80,3 @@ const BannerComponents = styled('div')`
   padding: 1rem;
   flex: 1;
 `
-
-export default Banner

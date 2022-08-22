@@ -2,7 +2,7 @@ import React from 'react'
 import {styled} from '@mui/material/styles'
 import {Typography} from '@mui/material'
 
-function Courses() {
+export default function Courses() {
   return (
     <Section id='courses'>
         <CustomTypography variant='h2'>Courses that I have gone through</CustomTypography>
@@ -32,5 +32,3 @@ const CustomTypography = styled(Typography)`
     background: linear-gradient(90deg, rgba(53,102,147,1) 0%, rgba(52,172,130,1) 100%);
   }
 `
-
-export default Courses

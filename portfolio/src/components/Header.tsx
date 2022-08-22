@@ -8,7 +8,7 @@ import {useTheme, ThemeProvider, createTheme} from '@mui/material/styles';
 export const ColorModeContext = React.createContext({ toggleColorMode: () => {
 }})
 
-function Header(props:any) {
+export default function Header(props:any) {
 
   //position and visibility of the appbar component
   const [position, setPosition] = useState(window.pageYOffset)
@@ -63,7 +63,7 @@ function Header(props:any) {
         </Fade>
         <Fade timeout={1000} in>
           <IconButton sx={{padding: '1rem'}} onClick={colorMode.toggleColorMode} color='inherit'>
-            {theme.palette.mode === 'dark' ? <LightModeIcon/> : <DarkModeIcon/>} 
+            {theme.palette.mode === 'dark' ? <LightModeIcon sx={{fontSize: '1.9rem'}}/> : <DarkModeIcon sx={{fontSize: '1.9rem'}}/>} 
           </IconButton>
         </Fade>
       </CustomToolbar>
@@ -86,6 +86,10 @@ const LinkContainer = styled('div')`
 
 const Redirect = styled('a')`
   all: unset;
+  position: relative;
+  :hover {
+    top: -1px;
+  }
 `
 
 const CustomTypography = styled(Typography)`
@@ -116,5 +120,3 @@ const CustomToolbar = styled(Toolbar)`
     width: 90vw;
   }
 `
-
-export default Header
