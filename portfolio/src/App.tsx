@@ -42,7 +42,7 @@ function App() {
         <AppContainer>
           <Header color={mode === 'light' ? 'secondary' : 'primary'}/>
           <Container>
-            <Banner/>
+            <Banner bannerText={mode === 'light' ? '#00b7eb' : 'yellow'}/>
             <Portfolio imageContainerFontColor = {mode === 'light' ? '#000' : '#fff'} gridFontColor = {mode === 'light' ? '#fff' : '#000'} gridColor = {mode === 'light' ? '#333' : '#cecece'} color={mode === 'light' ? '#f5f5f5' : '#161616'}/>
             {/*<Courses/>*/}
           </Container>

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Photo from '../assets/photo.png'
 import { teal } from '@mui/material/colors'
 import {styled} from '@mui/material/styles'
 import SocialMediaRow from './SocialMediaRow'
 import { Typography, Zoom, Avatar } from '@mui/material'
 
-export default function Banner() {
+export default function Banner(props: any) {
+
   return (
     <Zoom in timeout={300}>
       <Wrapper id='about-me'>
@@ -16,7 +17,7 @@ export default function Banner() {
             <Typography variant='body1'>Software development student with experience in JavaScript, NodeJS and React among many other libraries and frameworks :D</Typography>
           </BannerComponents>
           <BannerComponents sx={{flexDirection: 'row'}}>
-            <CustomTypography variant='h2'>Hello there, my name is Gabriel! <span style={{position: 'relative', fontSize:'3rem', top: '-5px'}}>&#128075;</span></CustomTypography>
+            <CustomTypography variant='h2'>Hello there, my name is <span style={{color: props.bannerText}}>Gabriel</span>! <span style={{position: 'relative', fontSize:'3rem', top: '-5px'}}>&#128075;</span></CustomTypography>
           </BannerComponents>
         </BannerContainer>
       </Wrapper>
