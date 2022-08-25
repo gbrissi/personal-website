@@ -8,21 +8,21 @@ import { IconButton } from '@mui/material';
 export default function SocialMediaRow() {
   return (
     <Wrapper>
-        <CustomIconButton>
-            <Redirect target='_blank' href='https://linkedin.com/in/gabriel-rissi'>
+        <Redirect target='_blank' href='https://linkedin.com/in/gabriel-rissi'>
+            <CustomIconButton>
                 <LinkedInIcon sx={{fontSize: '1.5rem', display: 'block'}}/>
-            </Redirect>
-        </CustomIconButton>
-        <CustomIconButton>
-            <Redirect target='_blank' href='https://github.com/gbrissi'>
+            </CustomIconButton>
+        </Redirect>
+        <Redirect target='_blank' href='https://github.com/gbrissi'>
+            <CustomIconButton>
                 <GitHubIcon sx={{fontSize: '1.5rem', display: 'block'}}/>
-            </Redirect>
-        </CustomIconButton>
-        <CustomIconButton>
-            <Redirect href="mailto:gabrielrissisc@gmail.com">
+            </CustomIconButton>
+        </Redirect>
+        <Redirect href="mailto:gabrielrissisc@gmail.com">
+            <CustomIconButton>
                 <EmailIcon sx={{fontSize: '1.5rem', display: 'block'}}/>
-            </Redirect>
-        </CustomIconButton>
+            </CustomIconButton>
+        </Redirect>
     </Wrapper>
   )
 }
