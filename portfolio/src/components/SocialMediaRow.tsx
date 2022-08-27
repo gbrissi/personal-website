@@ -34,14 +34,25 @@ const Wrapper = styled('div')`
 `
 
 const CustomIconButton = styled(IconButton)`
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 5px;
     padding: 15px;
     :hover {
-        position: relative;
-        top: -3px;
+        animation: zoom-in-zoom-out 2s ease infinite;
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.2, 1.2);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
     }
 `
 

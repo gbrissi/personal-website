@@ -62,14 +62,36 @@ export default function Header(props:any) {
           </LinkContainer>
         </Fade>
         <Fade timeout={1000} in>
-          <IconButton sx={{padding: '1rem'}} onClick={colorMode.toggleColorMode} color='inherit'>
+          <CustomIconButton sx={{padding: '1rem'}} onClick={colorMode.toggleColorMode} color='inherit'>
             {theme.palette.mode === 'dark' ? <LightModeIcon sx={{fontSize: '1.9rem'}}/> : <DarkModeIcon sx={{fontSize: '1.9rem'}}/>} 
-          </IconButton>
+          </CustomIconButton>
         </Fade>
       </CustomToolbar>
     </AppBar>
   )
 }
+
+const CustomIconButton = styled(IconButton)`
+  :hover {
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */ 
+    /* transform: rotate(.03turn);  */
+
+    @keyframes spin {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+    }
+  }
+`
 
 const StyledDivision = styled('div')`
   padding: 0 25px;
@@ -87,8 +109,10 @@ const LinkContainer = styled('div')`
 const Redirect = styled('a')`
   all: unset;
   position: relative;
-  :hover {
-    top: -1px;
+  > Button {
+    :hover {
+      transform: scale(1.05)
+    }
   }
 `
 
